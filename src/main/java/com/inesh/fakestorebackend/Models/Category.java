@@ -1,10 +1,11 @@
 package com.inesh.fakestorebackend.Models;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+//@Getter
+//@Setter
 public class Category {
     private Long id;
     private String title;
@@ -31,5 +32,14 @@ public class Category {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+//                "id=" + id +
+//                ", title='" + title + '\'' +
+                    "title='" + title + '\'' +
+                '}';
     }
 }

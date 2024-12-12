@@ -2,7 +2,11 @@ package com.inesh.fakestorebackend.Dto;
 
 import com.inesh.fakestorebackend.Models.Category;
 import com.inesh.fakestorebackend.Models.Product;
+import lombok.Getter;
+import lombok.Setter;
 
+//@Getter
+//@Setter
 public class FakeStoreProductDto {
     private Long id;
     private String title;
@@ -13,6 +17,7 @@ public class FakeStoreProductDto {
 
 
     public Product getProduct() {
+
         Product product = new Product();
         product.setId(id);
         product.setTitle(title);
@@ -26,49 +31,37 @@ public class FakeStoreProductDto {
 
         return product;
     }
-    
-    public Long getId() {
-        return id;
+
+    @Override
+    public String toString() {
+        return "FakeStoreProductDto{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", image='" + image + '\'' +
+                '}';
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public Double getPrice() {
-        return price;
-    }
-
     public void setPrice(Double price) {
         this.price = price;
     }
 
-    public String getImage() {
-        return image;
-    }
-
     public void setImage(String image) {
         this.image = image;
-    }
-
-    public String getCategory() {
-        return category;
     }
 
     public void setCategory(String category) {
@@ -77,11 +70,39 @@ public class FakeStoreProductDto {
 }
 
 
-//  {
-//id:1,
-//title:'...',
-//price:'...',
-//category:'...',
-//description:'...',
-//image:'...'
-//        }
+//
+//public class FakeStoreProductDto {
+//    private long id;
+//    private String title;
+//    private double price;
+//    private String description;
+//    private String category;
+//    private String image;
+//
+//    // Getters and setters
+//    public Product getProduct() {
+//        Product product = new Product();
+//        product.setId(this.id);
+//        product.setTitle(this.title);
+//        product.setDescription(this.description);
+//        product.setPrice(this.price);
+//        product.setImageUrl(this.image);
+//
+//        Category productCategory = new Category();
+//        productCategory.setTitle(this.category);
+//        product.setCategory(productCategory);
+//
+//        return product;
+//    }
+//}
+//
+//public class Product {
+//    private long id;
+//    private String title;
+//    private String description;
+//    private double price;
+//    private String imageUrl;
+//    private Category category;
+//
+//    // Getters and setters with no-args constructor
+//}
