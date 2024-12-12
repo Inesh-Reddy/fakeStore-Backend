@@ -7,13 +7,13 @@ import lombok.Setter;
 @Setter
 public class Category {
     private Long id;
-    private String name;
+    private String title;
 
 
     public Category() {}
 
-    public Category(Long id, String name) {
-        this.name = name;
+    public Category(Long id, String title) {
+        this.title = title;
         this.id = id;
     }
 
@@ -25,11 +25,11 @@ public class Category {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
