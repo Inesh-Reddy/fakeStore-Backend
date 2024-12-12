@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Greet {
+public class GreetController {
 
     @RequestMapping(value = "/fakeStore", method = RequestMethod.GET)
     public String greet(String name){
