@@ -17,8 +17,8 @@ public class ProductController {
 
     @GetMapping(value = "/fakeStore/products/{id}")
     public Product getProductById(@PathVariable ("id") Long id) {
-        fakeStoreProductService.getSingleProduct(id);
-        return null;
+        Product p =fakeStoreProductService.getSingleProduct(id);
+        return p;
     }
 
     @GetMapping(value = "/fakeStore/products/all")
